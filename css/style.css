@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  color: #c5c4c4;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.calculadora {
+  position: absolute;
+  border: 3px solid black;
+  background: linear-gradient(20deg, black, #5e5d5d);
+  -webkit-box-shadow: 20px 10px 4px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 20px 10px 4px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  width: 40%;
+  height: 70vh;
+  right: 20%;
+  bottom: 10%;
+}
+
+.calculadora .pantalla {
+  background-color: darkgrey;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  width: 80%;
+  height: 3rem;
+  margin: auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculadora .pantalla span {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px;
+  text-align: right;
+}
+
+.calculadora .teclado {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  height: 75%;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+
+.calculadora .teclado button {
+  background-color: #757575;
+  margin: 5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.calculadora .teclado :nth-child(4),
+.calculadora .teclado :nth-child(8),
+.calculadora .teclado :nth-child(12),
+.calculadora .teclado :nth-child(16),
+.calculadora .teclado :nth-child(15) {
+  font-size: 2rem;
+  background-color: #3a3939;
+}
+
+.calculadora .teclado :nth-child(13) {
+  background-color: #ff3434;
+}
+
+@media (max-width: 1050px) {
+  body {
+    background-position: right;
+  }
+  .calculadora {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/img.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    object-fit: contain;
+
+
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    h1{
+        color: rgb(197, 196, 196);
+        padding-top: 10px;
+        text-align: center;
+    }
+}
+
+.calculadora{
+    position: absolute;
+    border: 3px solid black;
+    background: linear-gradient(20deg, black, rgb(94, 93, 93));
+    box-shadow: 20px 10px 4px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    width: 40%;
+    height: 70vh;
+    right: 20%;
+    bottom: 10%;
+
+    .pantalla{
+        background-color: darkgrey;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        width: 80%;
+        height: 3rem;
+        margin: auto;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        
+        span{
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 20px;
+            text-align: right;
+        }
+    }
+    .teclado{
+        // border: thin solid black;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 80%;
+        height: 75%;
+        margin: auto;
+        margin-top: 1.5rem;
+
+        button{
+            background-color: rgb(117, 117, 117);
+            margin: 5px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 5px;
+        }:nth-child(4),
+        :nth-child(8),
+        :nth-child(12),
+        :nth-child(16),
+        :nth-child(15){
+            font-size: 2rem;
+            background-color: rgb(58, 57, 57);
+        }:nth-child(13){
+            background-color: rgb(255, 52, 52);
+        }
+    }
+}
+
+@media (max-width: 1050px){
+    body{
+        background-position: right;
+    }
+    .calculadora{
+        width: 60%;
+    }
+}
